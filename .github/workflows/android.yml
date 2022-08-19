@@ -47,7 +47,7 @@ jobs:
         uses: actions/upload-artifact@v1
         with:
           name: assembleApk
-          path: build/*.apk
+          path: build/
 #      - name: Release Artifact API
 #        uses: softprops/action-gh-release@v0.1.5
 #        if: startsWith(github.ref, 'refs/tags/')
