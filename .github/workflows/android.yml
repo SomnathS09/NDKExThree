@@ -34,8 +34,8 @@ jobs:
           java-version: 11
       - name: Build Debug
         run: .github/scripts/gradlew_recursive.sh assembleDebug
-#      - name : Build Release
-#        run: .github/scripts/gradlew_recursive.sh assembleRelease
+      - name : Build Release
+        run: .github/scripts/gradlew_recursive.sh assembleRelease
       - name: Zip artifacts
         run: zip -r assemble.zip . -i '**/build/*.apk' '**/build/*.aab' '**/build/*.aar' '**/build/*.so'
       - name: Upload artifacts

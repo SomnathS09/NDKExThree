@@ -4,6 +4,16 @@ plugins {
 }
 
 android {
+
+    signingConfigs {
+        release {
+            storeFile file('src/main/keystore/sas-alpha-flow-keystore.jks')
+            storePassword 'daplab@rao'
+            keyAlias 'release-key0'
+            keyPassword 'daplab@rao'
+        }
+    }
+
     compileSdk 32
 
     defaultConfig {
@@ -22,7 +32,11 @@ android {
     }
 
     buildTypes {
+        debug{
+            signingConfig signingConfigs.debug
+        }
         release {
+            signingConfig signingConfigs.release
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
