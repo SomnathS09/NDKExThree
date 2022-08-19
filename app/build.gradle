@@ -23,6 +23,8 @@ android {
         versionCode 1
         versionName "1.0"
 
+        archivesBaseName = "HappyLingo-$flavor-$versionCode($versionName)"
+
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         externalNativeBuild {
             cmake {
