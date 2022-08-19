@@ -37,7 +37,7 @@ jobs:
       - name : Build Release
         run: .github/scripts/gradlew_recursive.sh assembleRelease
       - name: Zip artifacts
-        run: zip -r assemble.zip . -i '**/build/*.apk' '**/build/*.json' '**/build/*.aab' '**/build/*.aar' '**/build/*.so'
+        run: zip -r assemble.zip . -i '**/build/*.apk' '**/build/outputs/*.json' '**/build/*.aab' '**/build/*.aar'
       - name: Upload artifacts
         uses: actions/upload-artifact@v1
         with:
