@@ -23,7 +23,7 @@ android {
         versionCode 1
         versionName "1.0"
 
-        archivesBaseName = "HappyLingo-$variant-$versionCode($versionName)"
+        archivesBaseName = "HappyLingo-$versionCode($versionName)"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         externalNativeBuild {
